@@ -1,0 +1,42 @@
+Gera a pasta data_preparado/ a partir dos dados digitalizados (revisão do TCC).
+
+Usada pelos notebooks da MM33 (painel B) e pelos notebooks *_sugestoes.ipynb.
+Preparação aplicada:
+  - Leitura correta: o arquivo data/all_data/data_frosberg19_fig3B_NOG_CTRL_3.csv usa ';'
+    como separador e ',' como decimal. Lido corretamente, ele volta ao grupo controle da
+    MM33 (painel B), que passa a ter 3 animais, como no artigo.
+  - O primeiro ponto de cada série é o marcador de volume zero no dia do transplante
+    (inoculação), desenhado sobre o eixo, e não uma medida. Ele é removido.
+  - Volumes abaixo de 1 mm^3 estão abaixo da resolução das figuras digitalizadas
+    (eixos de 200 a 800 mm^3) e correspondem a pontos desenhados sobre o eixo.
+    Eles passam a valer 0.
+Os arquivos originais não são alterados.
+Uso: apague a pasta data_preparado/ e rode  python preparar_dados.py
+
+Registro:
+B data_frosberg19_fig3B_hIL2_NOG_CART_1.csv: removido (0.79, 0.0276); 0 ponto(s) < 1.0 mm3 -> 0; restam 17
+B data_frosberg19_fig3B_hIL2_NOG_CART_2.csv: removido (0.79, 0.0276); 0 ponto(s) < 1.0 mm3 -> 0; restam 17
+B data_frosberg19_fig3B_hIL2_NOG_CART_3.csv: removido (0.79, 0.0276); 0 ponto(s) < 1.0 mm3 -> 0; restam 17
+B data_frosberg19_fig3B_NOG_CTRL_1.csv: removido (0.79, 2.1); 0 ponto(s) < 1.0 mm3 -> 0; restam 14
+B data_frosberg19_fig3B_NOG_CTRL_2.csv: removido (0.79, 2.1); 0 ponto(s) < 1.0 mm3 -> 0; restam 14
+B data_frosberg19_fig3B_NOG_CTRL_3.csv: removido (0.67, 0.02365); 2 ponto(s) < 1.0 mm3 -> 0; restam 6
+C data_frosberg19_fig3C_hIL2_NOG_CART_1.csv: removido (12.29, 0.5089); 0 ponto(s) < 1.0 mm3 -> 0; restam 7
+C data_frosberg19_fig3C_hIL2_NOG_CART_2.csv: removido (12.29, 0.5089); 0 ponto(s) < 1.0 mm3 -> 0; restam 12
+C data_frosberg19_fig3C_hIL2_NOG_CART_3.csv: removido (12.29, 0.5089); 0 ponto(s) < 1.0 mm3 -> 0; restam 7
+C data_frosberg19_fig3C_hIL2_NOG_CART_4.csv: removido (12.29, 0.5089); 0 ponto(s) < 1.0 mm3 -> 0; restam 12
+C data_frosberg19_fig3C_hIL2_NOG_CART_5.csv: removido (12.29, 0.5089); 7 ponto(s) < 1.0 mm3 -> 0; restam 7
+C data_frosberg19_fig3C_NOG_CTRL_1.csv: removido (12.78, 0.5089); 1 ponto(s) < 1.0 mm3 -> 0; restam 12
+C data_frosberg19_fig3C_NOG_CTRL_2.csv: removido (12.96, 0.5089); 0 ponto(s) < 1.0 mm3 -> 0; restam 12
+C data_frosberg19_fig3C_NOG_CTRL_3.csv: removido (12.78, 0.5089); 0 ponto(s) < 1.0 mm3 -> 0; restam 12
+C data_frosberg19_fig3C_NOG_CTRL_4.csv: removido (12.96, 0.5089); 1 ponto(s) < 1.0 mm3 -> 0; restam 12
+C data_frosberg19_fig3C_NOG_CTRL_5.csv: removido (12.96, 0.06503); 1 ponto(s) < 1.0 mm3 -> 0; restam 12
+D data_frosberg19_fig3D_hIL2_NOG_CART_1.csv: removido (12.92, 1.929); 1 ponto(s) < 1.0 mm3 -> 0; restam 24
+D data_frosberg19_fig3D_hIL2_NOG_CART_2.csv: removido (13.12, 0.9949); 2 ponto(s) < 1.0 mm3 -> 0; restam 24
+D data_frosberg19_fig3D_hIL2_NOG_CART_3.csv: removido (12.92, 0.994); 1 ponto(s) < 1.0 mm3 -> 0; restam 18
+D data_frosberg19_fig3D_hIL2_NOG_CART_4.csv: removido (12.92, 0.994); 0 ponto(s) < 1.0 mm3 -> 0; restam 19
+D data_frosberg19_fig3D_NOG_CTRL_1.csv: removido (13.09, 0.06103); 0 ponto(s) < 1.0 mm3 -> 0; restam 23
+D data_frosberg19_fig3D_NOG_CTRL_2.csv: removido (13.09, 0.06103); 0 ponto(s) < 1.0 mm3 -> 0; restam 25
+D data_frosberg19_fig3D_NOG_CTRL_3.csv: removido (12.89, 0.9925); 0 ponto(s) < 1.0 mm3 -> 0; restam 24
+D data_frosberg19_fig3D_NOG_CTRL_4.csv: removido (13.09, 0.06103); 0 ponto(s) < 1.0 mm3 -> 0; restam 25
+D data_frosberg19_fig3D_NOG_CTRL_5.csv: removido (13.09, 0.06103); 0 ponto(s) < 1.0 mm3 -> 0; restam 18
+D data_frosberg19_fig3D_NOG_CTRL_6.csv: removido (13.09, 0.06103); 0 ponto(s) < 1.0 mm3 -> 0; restam 18

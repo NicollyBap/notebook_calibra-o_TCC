@@ -1,0 +1,154 @@
+==========================================================================================
+RESULTADOS DO GRUPO TRATADO: data_figC
+==========================================================================================
+
+Crescimento fixo: logistic {'r': 0.0345575921228309, 'K': 204.39170590655115}
+Esquema: dias=[12.0] doses=[1.0]
+
+ARQUIVOS
+  Camundongo 1: data_frosberg19_fig3C_hIL2_NOG_CART_1.csv | n=7 | t∈[26.49,67.28] | V∈[23.41,63.61]
+  Camundongo 2: data_frosberg19_fig3C_hIL2_NOG_CART_2.csv | n=12 | t∈[26.28,103.17] | V∈[2.545,50.89]
+  Camundongo 3: data_frosberg19_fig3C_hIL2_NOG_CART_3.csv | n=7 | t∈[26.27,67.26] | V∈[8.142,50.89]
+  Camundongo 4: data_frosberg19_fig3C_hIL2_NOG_CART_4.csv | n=12 | t∈[26.28,102.98] | V∈[2.545,33.08]
+  Camundongo 5: data_frosberg19_fig3C_hIL2_NOG_CART_5.csv | n=7 | t∈[26.26,67.23] | V∈[0,0]
+
+COMPARAÇÃO DAS FUNÇÕES DE TRATAMENTO (ordenado por BIC)
+     model      BIC      AIC     AICc    LogLik    RMSE     MAE  WAPE (%)  sMAPE (%)    PCC    CCC    ICC  CV_RMSE  CV_MAE                                              diagnostics    ΔBIC   ΔAICc
+  T_atraso 330.6786 318.0320 321.0590 -152.0160  7.0928  5.2888   23.5482    56.8765 0.9117 0.9042 0.9061   5.2441  4.2407                              T0_5 no limite [0.001, 100]  0.0000  0.0000
+    T_hill 334.8343 320.3810 324.3810 -152.1905  7.1204  5.3100   23.6424    56.9324 0.9110 0.9033 0.9053   5.2286  4.2409        n no limite [1, 20] | T0_5 no limite [0.001, 100]  4.1557  3.3220
+T_hill_sat 338.1321 321.8721 327.0150 -151.9361  7.0802  5.3459   23.8023    57.2509 0.9118 0.9050 0.9069   4.9637  4.0913        n no limite [1, 20] | T0_5 no limite [0.001, 100]  7.4535  5.9560
+   T_rampa 344.7029 333.8630 336.0735 -160.9315  8.6469  6.3810   28.4109    58.9364 0.8656 0.8498 0.8526      NaN     NaN                              T0_5 no limite [0.001, 100] 14.0243 15.0145
+   T_expon 348.5538 335.9071 338.9342 -160.9536  8.6512  6.3883   28.4435    58.9706 0.8655 0.8493 0.8521      NaN     NaN dmax no limite [0.0001, 5] | T0_5 no limite [0.001, 100] 17.8751 17.8751
+   T_pulso 349.7983 337.1516 340.1787 -161.5758  8.7717  6.4119   28.5487    59.1604 0.8616 0.8439 0.8469      NaN     NaN     tau no limite [1, 400] | T0_5 no limite [0.001, 100] 19.1197 19.1197
+ T_bateman 352.5215 338.0682 342.0682 -161.0341  8.6667  6.4078   28.5303    58.9845 0.8651 0.8484 0.8513      NaN     NaN                                 k1 no limite [0.0001, 2] 21.8429 21.0092
+     const 368.1185 357.2785 359.4891 -172.6393 11.2163  8.1197   36.1525    64.7261 0.7585 0.7246 0.7291      NaN     NaN                              T0_5 no limite [0.001, 100] 37.4399 38.4300
+        ED 371.9252 359.2785 362.3056 -172.6393 11.2163  8.1197   36.1524    64.7261 0.7585 0.7246 0.7291      NaN     NaN         b no limite [0, 5] | T0_5 no limite [0.001, 100] 41.2465 41.2465
+      none 416.8772 407.8439 409.3824 -198.9220 20.0313 15.4750   68.9010   106.4342 0.3225 0.2868 0.2908      NaN     NaN                              T0_5 no limite [0.001, 100] 86.1986 88.3234
+
+MELHOR FUNÇÃO POR BIC: T_atraso
+
+PARÂMETROS E DIAGNÓSTICOS
+
+[T_atraso]  objetivo=50.3079
+      a = 0.0581636
+  delta = 32.6956
+  T0_camundongo_1 = 35.0571
+  T0_camundongo_2 = 31.5468
+  T0_camundongo_3 = 23.8295
+  T0_camundongo_4 = 16.0532
+  T0_camundongo_5 = 0.001
+    - T0_5 no limite [0.001, 100]
+  PREDIÇÃO último ponto: RMSE=5.244 MAE=4.241 WAPE=41.67% CCC=0.904
+    Camundongo 1: t=67.3 real=27.48 previsto=30.21 erro=2.727
+    Camundongo 2: t=103.2 real=2.545 previsto=11.99 erro=9.446
+    Camundongo 3: t=67.3 real=18.32 previsto=22.64 erro=4.323
+    Camundongo 4: t=103.0 real=2.545 previsto=7.251 erro=4.707
+    Camundongo 5: t=67.2 real=0 previsto=0.001169 erro=0.001169
+
+[T_hill]  objetivo=50.6996
+   dmax = 0.0585206
+    tau = 32.6673
+      n = 20
+  T0_camundongo_1 = 35.176
+  T0_camundongo_2 = 31.6933
+  T0_camundongo_3 = 23.9157
+  T0_camundongo_4 = 16.1379
+  T0_camundongo_5 = 0.001
+    - n no limite [1, 20]
+    - T0_5 no limite [0.001, 100]
+  PREDIÇÃO último ponto: RMSE=5.229 MAE=4.241 WAPE=41.67% CCC=0.904
+    Camundongo 1: t=67.3 real=27.48 previsto=30.25 erro=2.772
+    Camundongo 2: t=103.2 real=2.545 previsto=11.93 erro=9.382
+    Camundongo 3: t=67.3 real=18.32 previsto=22.7 erro=4.375
+    Camundongo 4: t=103.0 real=2.545 previsto=7.218 erro=4.673
+    Camundongo 5: t=67.2 real=0 previsto=0.001167 erro=0.001167
+
+[T_hill_sat]  objetivo=50.1291
+   dmax = 9.37688
+    tau = 31.7157
+      n = 20
+      h = 134.438
+  T0_camundongo_1 = 34.8465
+  T0_camundongo_2 = 31.8462
+  T0_camundongo_3 = 24.0351
+  T0_camundongo_4 = 17.0444
+  T0_camundongo_5 = 0.001
+    - n no limite [1, 20]
+    - T0_5 no limite [0.001, 100]
+  PREDIÇÃO último ponto: RMSE=4.964 MAE=4.091 WAPE=40.20% CCC=0.918
+    Camundongo 1: t=67.3 real=27.48 previsto=31.7 erro=4.214
+    Camundongo 2: t=103.2 real=2.545 previsto=11.35 erro=8.805
+    Camundongo 3: t=67.3 real=18.32 previsto=22.4 erro=4.076
+    Camundongo 4: t=103.0 real=2.545 previsto=5.905 erro=3.36
+    Camundongo 5: t=67.2 real=0 previsto=0.0009295 erro=0.0009295
+
+[T_rampa]  objetivo=74.7692
+      a = 0.000918004
+  T0_camundongo_1 = 39.9261
+  T0_camundongo_2 = 36.2285
+  T0_camundongo_3 = 27.1913
+  T0_camundongo_4 = 18.5544
+  T0_camundongo_5 = 0.001
+    - T0_5 no limite [0.001, 100]
+
+[T_expon]  objetivo=74.8425
+   dmax = 5
+    lam = 0.00018409
+  T0_camundongo_1 = 39.8784
+  T0_camundongo_2 = 36.1004
+  T0_camundongo_3 = 27.128
+  T0_camundongo_4 = 18.5944
+  T0_camundongo_5 = 0.001
+    - dmax no limite [0.0001, 5]
+    - T0_5 no limite [0.001, 100]
+
+[T_pulso]  objetivo=76.9419
+      k = 0.00103298
+    tau = 400
+  T0_camundongo_1 = 40.5587
+  T0_camundongo_2 = 36.6533
+  T0_camundongo_3 = 27.7077
+  T0_camundongo_4 = 18.8422
+  T0_camundongo_5 = 0.001
+    - tau no limite [1, 400]
+    - T0_5 no limite [0.001, 100]
+
+[T_bateman]  objetivo=75.1114
+      a = 1.39363
+     k1 = 0.0001
+     dk = 0.000672076
+  T0_camundongo_1 = 39.9146
+  T0_camundongo_2 = 36.3602
+  T0_camundongo_3 = 27.2548
+  T0_camundongo_4 = 18.6119
+  T0_camundongo_5 = 0.124421
+    - k1 no limite [0.0001, 2]
+
+[const]  objetivo=125.805
+      a = 0.0377293
+  T0_camundongo_1 = 46.8377
+  T0_camundongo_2 = 39.4048
+  T0_camundongo_3 = 32.5845
+  T0_camundongo_4 = 20.6498
+  T0_camundongo_5 = 0.001
+    - T0_5 no limite [0.001, 100]
+
+[ED]  objetivo=125.805
+      a = 0.0377293
+      b = 0
+  T0_camundongo_1 = 46.8378
+  T0_camundongo_2 = 39.4048
+  T0_camundongo_3 = 32.5846
+  T0_camundongo_4 = 20.6497
+  T0_camundongo_5 = 0.001
+    - b no limite [0, 5]
+    - T0_5 no limite [0.001, 100]
+
+[none]  objetivo=401.252
+  (sem parâmetros de tratamento)
+  T0_camundongo_1 = 18.664
+  T0_camundongo_2 = 2.94415
+  T0_camundongo_3 = 11.4035
+  T0_camundongo_4 = 1.58907
+  T0_camundongo_5 = 0.001
+    - T0_5 no limite [0.001, 100]

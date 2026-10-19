@@ -1,0 +1,105 @@
+==========================================================================================
+RESULTADOS DO GRUPO: data_figC
+==========================================================================================
+
+ARQUIVOS
+  Camundongo 1: data_frosberg19_fig3C_NOG_CTRL_1.csv | n=12 | t∈[26.85,103.15] | V∈[0,166.9]
+  Camundongo 2: data_frosberg19_fig3C_NOG_CTRL_2.csv | n=12 | t∈[26.85,103.15] | V∈[21.88,158.3]
+  Camundongo 3: data_frosberg19_fig3C_NOG_CTRL_3.csv | n=12 | t∈[26.67,103.15] | V∈[7.634,118.1]
+  Camundongo 4: data_frosberg19_fig3C_NOG_CTRL_4.csv | n=12 | t∈[26.67,102.96] | V∈[0,81.42]
+  Camundongo 5: data_frosberg19_fig3C_NOG_CTRL_5.csv | n=12 | t∈[26.85,103.10] | V∈[0,72.28]
+
+COMPARAÇÃO DE MODELOS (ordenado por BIC)
+      model      BIC      AIC     AICc    LogLik    RMSE     MAE  WAPE (%)  sMAPE (%)    PCC    CCC    ICC  CV_RMSE  CV_MAE                                                                      diagnostics    ΔBIC   ΔAICc
+   logistic 528.3467 513.6863 515.8401 -249.8432 15.5653 12.3861   19.5166    38.8826 0.9364 0.9345 0.9355  15.3816 14.1720                                                             sem problemas óbvios  0.0000  0.0000
+     linear 529.0184 514.3580 516.5118 -250.1790 15.6527 12.1339   19.1194    38.5085 0.9356 0.9337 0.9347  13.7863  9.4208                                                             sem problemas óbvios  0.6717  0.6717
+bertalanffy 529.3418 514.6814 516.8353 -250.3407 15.6949 12.0793   19.0332    38.3631 0.9353 0.9334 0.9344  13.8732  9.4550                                                             sem problemas óbvios  0.9951  0.9951
+ mendelsohn 529.6441 514.9837 517.1375 -250.4918 15.7345 12.0793   19.0333    38.1758 0.9349 0.9329 0.9339      NaN     NaN                                                             sem problemas óbvios  1.2974  1.2974
+   gompertz 532.7188 515.9640 518.7875 -249.9820 15.6014 12.3313   19.4304    39.1111 0.9361 0.9345 0.9355      NaN     NaN                                                             sem problemas óbvios  4.3721  2.9474
+exponential 535.0986 522.5325 524.1175 -255.2663 17.0382 13.4419   21.1803    39.3243 0.9243 0.9173 0.9185      NaN     NaN                                                             sem problemas óbvios  6.7519  8.2773
+    surface 539.1360 524.4756 526.6295 -255.2378 17.0301 13.4578   21.2053    39.3133 0.9244 0.9174 0.9186      NaN     NaN f no limite [1e-06, 1.669e+04] | f muito grande; modelo vira quase não-saturante 10.7893 10.7893
+
+MELHOR MODELO POR BIC: logistic
+
+PARÂMETROS E DIAGNÓSTICOS
+
+[LOGISTIC]  objetivo=242.278
+         r = 0.0345576
+         K = 204.392
+  T0_camundongo_1 = 42.6735
+  T0_camundongo_2 = 37.1268
+  T0_camundongo_3 = 12.6894
+  T0_camundongo_4 = 10.1647
+  T0_camundongo_5 = 10.0671
+  PREDIÇÃO último ponto: RMSE=15.38 MAE=14.17 WAPE=11.87% CCC=0.902
+    Camundongo 1: t=103.1 real=166.9 previsto=153.6 erro=13.35
+    Camundongo 2: t=103.1 real=158.3 previsto=149.1 erro=9.183
+    Camundongo 3: t=103.1 real=118.1 previsto=94.53 erro=23.53
+    Camundongo 4: t=103.0 real=81.42 previsto=88.38 erro=6.955
+    Camundongo 5: t=103.1 real=72.28 previsto=90.12 erro=17.84
+
+[LINEAR]  objetivo=245.006
+         r = 2.5596
+         f = 52.536
+  T0_camundongo_1 = 43.8768
+  T0_camundongo_2 = 37.9529
+  T0_camundongo_3 = 11.7631
+  T0_camundongo_4 = 8.64159
+  T0_camundongo_5 = 8.93247
+  PREDIÇÃO último ponto: RMSE=13.79 MAE=9.421 WAPE=7.89% CCC=0.933
+    Camundongo 1: t=103.1 real=166.9 previsto=168.2 erro=1.292
+    Camundongo 2: t=103.1 real=158.3 previsto=157.8 erro=0.4807
+    Camundongo 3: t=103.1 real=118.1 previsto=92 erro=26.06
+    Camundongo 4: t=103.0 real=81.42 previsto=84.6 erro=3.172
+    Camundongo 5: t=103.1 real=72.28 previsto=88.38 erro=16.1
+
+[BERTALANFFY]  objetivo=246.33
+         r = 0.142504
+     alpha = 0.0140761
+  T0_camundongo_1 = 44.4296
+  T0_camundongo_2 = 38.4327
+  T0_camundongo_3 = 10.6358
+  T0_camundongo_4 = 6.8756
+  T0_camundongo_5 = 7.50997
+  PREDIÇÃO último ponto: RMSE=13.87 MAE=9.455 WAPE=7.92% CCC=0.932
+    Camundongo 1: t=103.1 real=166.9 previsto=168.4 erro=1.513
+    Camundongo 2: t=103.1 real=158.3 previsto=157.8 erro=0.4812
+    Camundongo 3: t=103.1 real=118.1 previsto=92.11 erro=25.96
+    Camundongo 4: t=103.0 real=81.42 previsto=84.04 erro=2.617
+    Camundongo 5: t=103.1 real=72.28 previsto=88.98 erro=16.7
+
+[MENDELSOHN]  objetivo=247.574
+         r = 0.188892
+         b = 0.472223
+  T0_camundongo_1 = 44.8229
+  T0_camundongo_2 = 38.8719
+  T0_camundongo_3 = 10.7432
+  T0_camundongo_4 = 6.51158
+  T0_camundongo_5 = 7.39211
+
+[GOMPERTZ]  objetivo=243.404
+         r = 0.0227762
+         K = 297.98
+         c = 42.0575
+  T0_camundongo_1 = 42.8611
+  T0_camundongo_2 = 37.0276
+  T0_camundongo_3 = 10.8508
+  T0_camundongo_4 = 8.24913
+  T0_camundongo_5 = 8.28943
+
+[EXPONENTIAL]  objetivo=290.3
+         r = 0.0182151
+  T0_camundongo_1 = 45.9746
+  T0_camundongo_2 = 41.666
+  T0_camundongo_3 = 22.64
+  T0_camundongo_4 = 18.9952
+  T0_camundongo_5 = 18.9689
+
+[SURFACE]  objetivo=290.024
+         r = 0.457695
+         f = 15779.5
+  T0_camundongo_1 = 45.9792
+  T0_camundongo_2 = 41.659
+  T0_camundongo_3 = 22.6071
+  T0_camundongo_4 = 18.8426
+  T0_camundongo_5 = 19.0922

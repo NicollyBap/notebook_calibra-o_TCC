@@ -1,0 +1,147 @@
+==========================================================================================
+RESULTADOS DO GRUPO TRATADO: data_figD
+==========================================================================================
+
+Crescimento fixo: mendelsohn {'r': 0.004064986809555, 'b': 1.4002090355737984}
+Esquema: dias=[65.0] doses=[1.0]
+
+ARQUIVOS
+  Camundongo 1: data_frosberg19_fig3D_hIL2_NOG_CART_1.csv | n=24 | t∈[19.79,184.06] | V∈[0,79.82]
+  Camundongo 2: data_frosberg19_fig3D_hIL2_NOG_CART_2.csv | n=24 | t∈[20.18,184.06] | V∈[0,41.69]
+  Camundongo 3: data_frosberg19_fig3D_hIL2_NOG_CART_3.csv | n=18 | t∈[20.18,150.15] | V∈[0,21.9]
+  Camundongo 4: data_frosberg19_fig3D_hIL2_NOG_CART_4.csv | n=19 | t∈[19.78,150.15] | V∈[1.026,10.75]
+
+COMPARAÇÃO DAS FUNÇÕES DE TRATAMENTO (ordenado por BIC)
+     model      BIC      AIC     AICc    LogLik    RMSE     MAE  WAPE (%)  sMAPE (%)     PCC     CCC     ICC  CV_RMSE  CV_MAE                                                                                          diagnostics     ΔBIC    ΔAICc
+   T_rampa 596.6190 584.4058 585.1652 -287.2029  7.0987  4.9911   27.9057    50.5314  0.9199  0.9129  0.9138   1.5327  1.4351                                sem problemas óbvios | resíduos não-normais (Shapiro-Wilk p=0.000532)   0.0000   0.0000
+   T_expon 601.1531 586.4972 587.5741 -287.2486  7.1025  4.9965   27.9360    50.4686  0.9199  0.9126  0.9136   1.5322  1.4315                                sem problemas óbvios | resíduos não-normais (Shapiro-Wilk p=0.000536)   4.5341   2.4088
+    T_hill 603.1456 586.0470 587.5016 -286.0235  7.0008  4.8404   27.0630    49.9332  0.9215  0.9161  0.9170   1.5268  1.4991                               tau no limite [1, 150] | resíduos não-normais (Shapiro-Wilk p=0.00106)   6.5266   2.3363
+   T_pulso 603.2886 588.6327 589.7096 -288.3163  7.1923  5.0816   28.4116    50.4354  0.9180  0.9101  0.9111      NaN     NaN                              tau no limite [1, 400] | resíduos não-normais (Shapiro-Wilk p=0.000369)   6.6696   4.5444
+ T_bateman 605.6774 588.5789 590.0334 -287.2894  7.1060  4.9999   27.9547    50.4303  0.9200  0.9125  0.9134      NaN     NaN k1 no limite [0.0001, 2] | dk no limite [0.0001, 5] | resíduos não-normais (Shapiro-Wilk p=0.000418)   9.0584   4.8682
+T_hill_sat 609.1565 589.6153 591.5100 -286.8076  7.0657  4.8868   27.3223    50.4625  0.9199  0.9144  0.9153      NaN     NaN       tau no limite [1, 150] | h no limite [0.1, 1000] | resíduos não-normais (Shapiro-Wilk p=0.001)  12.5375   6.3448
+  T_atraso 611.8885 597.2326 598.3096 -292.6163  7.5655  5.4066   30.2288    51.2644  0.9080  0.9000  0.9011      NaN     NaN                                sem problemas óbvios | resíduos não-normais (Shapiro-Wilk p=0.000397)  15.2695  13.1443
+     const 661.8732 649.6600 650.4195 -319.8300 10.4203  7.8679   43.9898    64.5909  0.8250  0.7747  0.7768      NaN     NaN                                sem problemas óbvios | resíduos não-normais (Shapiro-Wilk p=0.000316)  65.2542  65.2542
+        ED 669.7499 655.0940 656.1710 -321.5470 10.6327  7.6327   42.6749    62.9089  0.8079  0.7778  0.7798      NaN     NaN                                  b no limite [0, 5] | resíduos não-normais (Shapiro-Wilk p=4.03e-05)  73.1309  71.0057
+      none 782.0896 772.3190 772.8190 -382.1595 21.5524 16.2000   90.5756   108.6588 -0.1828 -0.0870 -0.0880      NaN     NaN                                  sem problemas óbvios | resíduos não-normais (Shapiro-Wilk p=0.0136) 185.4706 187.6537
+
+MELHOR FUNÇÃO POR BIC: T_rampa
+
+PARÂMETROS E DIAGNÓSTICOS
+
+[T_rampa]  objetivo=50.392
+      a = 0.000841163
+  T0_camundongo_1 = 22.6274
+  T0_camundongo_2 = 15.7919
+  T0_camundongo_3 = 10.9938
+  T0_camundongo_4 = 5.62124
+    - sem problemas óbvios
+    - resíduos não-normais (Shapiro-Wilk p=0.000532)
+  PREDIÇÃO último ponto: RMSE=1.533 MAE=1.435 WAPE=109.92% CCC=-0.926
+    Camundongo 1: t=184.1 real=1.794 previsto=0.7114 erro=1.082
+    Camundongo 2: t=184.1 real=1.794 previsto=0.2925 erro=1.501
+    Camundongo 3: t=150.2 real=0 previsto=2.281 erro=2.281
+    Camundongo 4: t=150.2 real=1.635 previsto=0.7597 erro=0.8756
+
+[T_expon]  objetivo=50.4462
+   dmax = 3.98434
+    lam = 0.000211798
+  T0_camundongo_1 = 22.6158
+  T0_camundongo_2 = 15.7974
+  T0_camundongo_3 = 10.9152
+  T0_camundongo_4 = 5.69549
+    - sem problemas óbvios
+    - resíduos não-normais (Shapiro-Wilk p=0.000536)
+  PREDIÇÃO último ponto: RMSE=1.532 MAE=1.432 WAPE=109.64% CCC=-0.929
+    Camundongo 1: t=184.1 real=1.794 previsto=0.7261 erro=1.068
+    Camundongo 2: t=184.1 real=1.794 previsto=0.2977 erro=1.496
+    Camundongo 3: t=150.2 real=0 previsto=2.293 erro=2.293
+    Camundongo 4: t=150.2 real=1.635 previsto=0.7654 erro=0.8698
+
+[T_hill]  objetivo=49.0111
+   dmax = 0.290954
+    tau = 150
+      n = 1.5455
+  T0_camundongo_1 = 21.5278
+  T0_camundongo_2 = 15.2301
+  T0_camundongo_3 = 10.5591
+  T0_camundongo_4 = 5.44873
+    - tau no limite [1, 150]
+    - resíduos não-normais (Shapiro-Wilk p=0.00106)
+  PREDIÇÃO último ponto: RMSE=1.527 MAE=1.499 WAPE=114.81% CCC=-0.763
+    Camundongo 1: t=184.1 real=1.794 previsto=0.2889 erro=1.505
+    Camundongo 2: t=184.1 real=1.794 previsto=0.1248 erro=1.669
+    Camundongo 3: t=150.2 real=0 previsto=1.792 erro=1.792
+    Camundongo 4: t=150.2 real=1.635 previsto=0.6049 erro=1.03
+
+[T_pulso]  objetivo=51.7299
+      k = 0.00094974
+    tau = 388.65
+  T0_camundongo_1 = 22.9128
+  T0_camundongo_2 = 15.911
+  T0_camundongo_3 = 11.0965
+  T0_camundongo_4 = 5.66214
+    - tau no limite [1, 400]
+    - resíduos não-normais (Shapiro-Wilk p=0.000369)
+
+[T_bateman]  objetivo=50.4949
+      a = 8.47502
+     k1 = 0.0001
+     dk = 0.0001
+  T0_camundongo_1 = 22.6526
+  T0_camundongo_2 = 15.7948
+  T0_camundongo_3 = 10.9213
+  T0_camundongo_4 = 5.89524
+    - k1 no limite [0.0001, 2]
+    - dk no limite [0.0001, 5]
+    - resíduos não-normais (Shapiro-Wilk p=0.000418)
+
+[T_hill_sat]  objetivo=49.9235
+   dmax = 300.474
+    tau = 150
+      n = 1.54356
+      h = 1000
+  T0_camundongo_1 = 21.3806
+  T0_camundongo_2 = 15.2861
+  T0_camundongo_3 = 10.5985
+  T0_camundongo_4 = 5.47043
+    - tau no limite [1, 150]
+    - h no limite [0.1, 1000]
+    - resíduos não-normais (Shapiro-Wilk p=0.001)
+
+[T_atraso]  objetivo=57.2362
+      a = 0.0446395
+  delta = 23.6508
+  T0_camundongo_1 = 21.8346
+  T0_camundongo_2 = 14.9644
+  T0_camundongo_3 = 10.4957
+  T0_camundongo_4 = 5.42351
+    - sem problemas óbvios
+    - resíduos não-normais (Shapiro-Wilk p=0.000397)
+
+[const]  objetivo=108.582
+      a = 0.0290079
+  T0_camundongo_1 = 25.2418
+  T0_camundongo_2 = 16.9421
+  T0_camundongo_3 = 13.86
+  T0_camundongo_4 = 7.23753
+    - sem problemas óbvios
+    - resíduos não-normais (Shapiro-Wilk p=0.000316)
+
+[ED]  objetivo=113.055
+      a = 0.0298911
+      b = 0
+  T0_camundongo_1 = 26.6155
+  T0_camundongo_2 = 14.2732
+  T0_camundongo_3 = 12.6931
+  T0_camundongo_4 = 7.49537
+    - b no limite [0, 5]
+    - resíduos não-normais (Shapiro-Wilk p=4.03e-05)
+
+[none]  objetivo=464.506
+  (sem parâmetros de tratamento)
+  T0_camundongo_1 = 5.01646
+  T0_camundongo_2 = 4.16331
+  T0_camundongo_3 = 5.01298
+  T0_camundongo_4 = 3.01995
+    - sem problemas óbvios
+    - resíduos não-normais (Shapiro-Wilk p=0.0136)
